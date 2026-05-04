@@ -1,3 +1,15 @@
+
+/**
+ * Holland, Victoria
+ * CIS 505 - Intermediate Java Programming
+ * Bellevue University
+ * Assignment 7.2 - FutureValueApp
+ *
+ * This program builds a JavaFX GUI application that calculates
+ * the future value of a monthly investment over a given number
+ * of years at a specified annual interest rate.
+ */
+
 import javafx.application.Application;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
@@ -86,10 +98,10 @@ public class HollandFutureValueApp extends Application {
             double futureValue = monthlyPayment
                     * ((Math.pow(1 + monthlyRate, numMonths) - 1) / monthlyRate);
 
-            taFutureValue.setText(String.format("Future Value: $%,.2f", futureValue));
+            taFutureValue.setText("  Future Value\n    $" + String.format("%,.2f", futureValue));
 
         } catch (NumberFormatException ex) {
-            taFutureValue.setText("Please enter valid numeric values.");
+            taFutureValue.setText("  Please enter valid numeric values.");
         }
     }
 
